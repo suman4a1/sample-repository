@@ -13,6 +13,7 @@ app.controller('MainCtrl', function MainCtrl($scope) {
     }
     else{
       $scope.gridOptions.data[details.index] = details;
+      $scope.update = false;
     }
     $scope.inventory = {}
   }
