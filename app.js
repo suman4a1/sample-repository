@@ -7,8 +7,10 @@ app.controller('MainCtrl', function MainCtrl($scope) {
   $scope.update = false;
   $scope.view =false; 
   $scope.addToGrid =(details,Mode)=>{
-    if(Mode==='ADD')
+    if(Mode==='ADD'){
+      if(details.name)
      $scope.gridOptions.data.push(details);
+    }
     else{
       $scope.gridOptions.data[details.index] = details;
     }
